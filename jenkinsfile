@@ -9,6 +9,7 @@ pipeline {
 		stage ('copy for jenkin data') {
 			steps {
 				sh "rm -rf *"
+				sh "git clone https://github.com/Ganeshkothule/Assignment-1.git -b 22Q1"
 				sh "chmod -R 777 /mnt"
 				sh "cp /mnt/ASSIGNMENT/22Q1/index.html /var/www/html/index.html"
 			}
