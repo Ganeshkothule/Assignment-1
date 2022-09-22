@@ -9,7 +9,7 @@ pipeline {
 		stage ('copy for jenkin data') {
 			steps {
 				sh "chmod -R 777 /mnt"
-				sh "docker cp /mnt/ASSIGNMENT/22Q1/index.html /var/www/html/index.html'"
+				sh "docker cp /mnt/ASSIGNMENT/22Q1/index.html /var/www/html/'"
 			}
 		}
 	}
