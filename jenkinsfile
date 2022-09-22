@@ -8,6 +8,7 @@ pipeline {
 	stages {
 		stage ('copy for jenkin data') {
 			steps {
+				sh "rm -rf *"
 				sh "chmod -R 777 /mnt"
 				sh "cp /mnt/ASSIGNMENT/22Q1/index.html /var/www/html/'"
 			}
