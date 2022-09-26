@@ -14,8 +14,9 @@ pipeline {
 		}
 		stage('run ansible playbook'){
 			steps{
-				dir ('/home/ansible/22Q1/Assignment-1')
+				dir ('/home/ansible/22Q2/Assignment-1'){
 				sh "ansible-playbook playbook22q1.yml"
+				}
 			}
 		}
     }	
