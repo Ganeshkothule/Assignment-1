@@ -1,15 +1,22 @@
 pipeline {
-	agent {
-		label {
-		label 'built-in'
-		customWorkspace "/mnt/ASSIGNMENT/22Q2"
-		}
+    agent {
+        label {
+			label 'built-in'
+            customWorkspace "/home/ansible/22Q2"
+        }
 	}
-	stages {
-		stage ('copy data') {
+    stages {
+		stage ('copy for jenkin data') {
 			steps {
-				sh "echo 'hii this is me'"
+				sh "rm -rf *"
+				sh "git clone https://github.com/Ganeshkothule/Assignment-1.git -b 22Q2"
 			}
 		}
-	}
+		stage('run ansible playbook'){
+			steps{
+				dir ('/home/ansible/22Q2/Assignment-1')
+				sh "ansible-playbook playbook22q2.yml"
+			}
+		}
+    }	
 }
