@@ -6,12 +6,12 @@ pipeline {
         }
 	}
     stages {
-		stage ('copy for jenkin data') {
+		/*stage ('copy for jenkin data') {
 			steps {
 				sh "rm -rf *"
 				sh "git clone https://github.com/Ganeshkothule/Assignment-1.git -b 22Q1"
 			}
-		}
+		}*/
 		stage('run ansible playbook'){
 			steps{
 				dir ('/home/ansible/22Q1/Assignment-1'){
